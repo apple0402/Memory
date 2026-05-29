@@ -23,7 +23,11 @@ app.get('/', (req, res) => {
     res.send('Smart Rider App Backend is running.');
 });
 
+
 // [TODO] 데이터베이스 관련 라우트 정의 (향후 구현 예정)
+app.use('/api/rides', require('./routes/rideRoutes'));
+app.use('/api/safety', require('./routes/safetyRoutes'));
+
 // app.use('/api/rides', require('./routes/rideRoutes'));
 // app.use('/api/safety', require('./routes/safetyRoutes'));
 
